@@ -1,0 +1,47 @@
+@import "../../Components//GlobalStyles/GlobalStyles.module.scss";
+
+.content_container {
+    display: flex;
+    gap: 13rem;
+}
+
+.page_title {
+    @include heading5();
+    padding: 6rem 0 3rem;
+    text-transform: uppercase;
+
+    span {
+        font-weight: bold;
+        opacity: 0.25;
+        margin-right: 2.8rem;
+    }
+}
+
+.left_part {
+    flex: 0.6;
+    display: flex;
+    align-items: center;
+    .content {
+        color: var(--color-main-purple);
+        .sub_heading {
+            @include navText();
+            text-transform: uppercase;
+        }
+
+        .heading {
+            @include heading3();
+
+            text-transform: uppercase;
+            margin: 1rem 0 1.7rem;
+        }
+    }
+}
+
+.right_part {
+    flex: 0.4;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}

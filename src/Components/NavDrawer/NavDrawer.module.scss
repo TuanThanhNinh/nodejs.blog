@@ -1,0 +1,47 @@
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &.drawerOpen {
+        display: block;
+    }
+}
+
+.content {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    z-index: 40;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    transform: translateX(100%);
+    transition: all 0.6s ease-out;
+
+    &.drawerOpen {
+        transform: translateX(0);
+    }
+}
+
+.close_btn {
+    position: absolute;
+    font-size: 4rem;
+    right: 3rem;
+    top: 3rem;
+}
+
+.nav_list {
+    padding: 15rem 0.2rem 5rem 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

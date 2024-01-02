@@ -1,0 +1,71 @@
+@import "../../Components/GlobalStyles/GlobalStyles.module.scss";
+
+.home_wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.content_wrapper {
+    max-width: 40rem;
+    color: var(--color-main-purple);
+
+    .sub_heading {
+        @include subHeading2;
+        letter-spacing: 4.72px;
+    }
+
+    .heading {
+        @include heading1();
+        margin: 2.4rem 0;
+        color: #fff;
+    }
+}
+
+@media (max-width: $tablet-size) {
+    .container {
+        flex-direction: column;
+        padding: 7rem 0;
+        gap: 5rem;
+    }
+
+    .content_wrapper {
+        max-width: 45rem;
+
+        .heading {
+            @include heading1();
+            margin: 2.4rem 0;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: $mobile-size) {
+    .home_wrapper {
+        padding-top: 5rem;
+        gap: 3rem;
+    }
+
+    .container {
+        padding: 3rem 0;
+        gap: 2rem;
+    }
+
+    .content_wrapper {
+        max-width: 45rem;
+
+        .heading {
+            font-size: 12rem;
+        }
+        .text {
+            font-size: 1.6rem;
+            line-height: 28px;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "../GlobalStyles/GlobalStyles.module.scss";
+
+.nav_wrapper {
+    @include navText();
+    color: var(--color-main-white);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    padding: 0 16.5rem 0 12rem;
+    ul {
+        display: flex;
+        gap: 4.8rem;
+    }
+
+    i {
+        display: flex;
+        font-size: 3.8rem;
+    }
+}
+
+.navIcon {
+    position: fixed;
+}
+
+@media (max-width: 1024px) {
+    .nav_wrapper {
+        padding: 0 8rem 0 6rem;
+        ul {
+            gap: 3.2rem;
+        }
+    }
+}
+
+@media (max-width: $tablet-size) {
+    .nav_wrapper {
+        padding: 0 2em;
+        color: none;
+        background: none;
+    }
+}
+
+i {
+    position: relative;
+    z-index: 60;
+}

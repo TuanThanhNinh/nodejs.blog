@@ -1,0 +1,73 @@
+@import "../GlobalStyles/GlobalStyles.module.scss";
+a {
+    z-index: 30;
+}
+
+.nav_link,
+.nav_btn {
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        opacity: 0.7;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+        &::after {
+            transform: scale(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        &::after {
+            transform: scale(1);
+            background-color: #fff;
+        }
+
+        &:hover {
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+li {
+    @include navText();
+    cursor: pointer;
+    position: relative;
+    padding: 3.5rem 0;
+    transition: all 0.6s ease-out;
+
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    li {
+        display: flex;
+        padding: 0 7rem 0;
+
+        &::after {
+            left: 100%;
+            bottom: 0;
+            width: 2px;
+            height: 100%;
+            transform-origin: top;
+        }
+
+        &:hover::after {
+            transform: scaleY(1);
+            transform-origin: bottom;
+        }
+    }
+}

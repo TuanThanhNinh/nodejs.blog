@@ -1,0 +1,90 @@
+@import "../Components/GlobalStyles/GlobalStyles.module.scss";
+.main_layout {
+    position: "relative";
+    display: flex;
+    flex-direction: column;
+    background: center / cover no-repeat;
+    min-height: 100vh;
+    max-width: 100vw;
+    // overflow: hidden;
+}
+
+.header {
+    padding-top: 2rem;
+    border: 3px solid blue;
+}
+
+.content {
+    padding: 0 14.5rem;
+    flex-grow: 1;
+    border: 3px solid red;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.main_layout.home-bg {
+    background-image: url("../assets/img/home/background-home-desktop.jpg");
+}
+.main_layout.destination-bg {
+    background-image: url("../assets/img/destination/background-destination-desktop.jpg");
+}
+.main_layout.crew-bg {
+    background-image: url("../assets/img/crew/background-crew-desktop.jpg");
+}
+.main_layout.technology-bg {
+    background-image: url("../assets/img/technology/background-technology-desktop.jpg");
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding: 0 12rem;
+    }
+}
+@media (max-width: 1024px) {
+    .content {
+        padding: 0 8.5rem;
+    }
+}
+
+@media (max-width: $tablet-size) {
+    .content {
+        padding: 0 5.5rem;
+    }
+    .header {
+        padding-top: 1rem;
+    }
+    .main_layout.home-bg {
+        background-image: url("../assets/img/home/background-home-tablet.jpg");
+    }
+    .main_layout.destination-bg {
+        background-image: url("../assets/img/destination/background-destination-tablet.jpg");
+    }
+    .main_layout.crew-bg {
+        background-image: url("../assets/img/crew/background-crew-tablet.jpg");
+    }
+    .main_layout.technology-bg {
+        background-image: url("../assets/img/technology/background-technology-tablet.jpg");
+    }
+}
+
+@media (max-width: $mobile-size) {
+    .content {
+        padding: 0 3.5rem;
+    }
+    .header {
+        padding-top: 0.2rem;
+    }
+    .main_layout.home-bg {
+        background-image: url("../assets/img/home/background-home-mobile.jpg");
+    }
+    .main_layout.destination-bg {
+        background-image: url("../assets/img/destination/background-destination-mobile.jpg");
+    }
+    .main_layout.crew-bg {
+        background-image: url("../assets/img/crew/background-crew-mobile.jpg");
+    }
+    .main_layout.technology-bg {
+        background-image: url("../assets/img/technology/background-technology-mobile.jpg");
+    }
+}

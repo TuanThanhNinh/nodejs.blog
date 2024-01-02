@@ -1,0 +1,99 @@
+@import "normalize.css";
+
+:root {
+    --color-main-black: #0b0d17;
+    --color-main-purple: #d0d6f9;
+    --color-main-white: #ffffff;
+}
+
+$bellaFairFont: "Bellefair", serif;
+$barlowCondensed: "Barlow Condensed", sans-serif;
+$tablet-size: 768px;
+$mobile-size: 480px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 960px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+@mixin subHeading1() {
+    font-family: $bellaFairFont;
+    font-size: 28px;
+}
+@mixin subHeading2() {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2.35px;
+}
+@mixin navText() {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+}
+
+@mixin heading1() {
+    font-family: $bellaFairFont;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 100%;
+}
+@mixin heading2() {
+    font-family: $bellaFairFont;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100%;
+}
+@mixin heading3() {
+    font-family: $bellaFairFont;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 100%;
+    color: #ffffff;
+}
+@mixin heading4() {
+    font-family: $bellaFairFont;
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: 2px;
+    line-height: 100%;
+}
+@mixin heading5() {
+    font-family: $barlowCondensed;
+    font-weight: normal;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    line-height: 100%;
+}
+
+// font-family: 'Barlow Condensed', sans-serif;
+// font-family: 'Bellefair', serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.8rem;
+    line-height: 32px;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
